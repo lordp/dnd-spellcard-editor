@@ -54,7 +54,7 @@ class DNDApp(QtGui.QMainWindow, dndui.Ui_MainWindow):
             self.spell_filename = 'spells.json'
 
         with open(self.spell_filename, 'w') as fp:
-            json.dump(self.spells, fp)
+            json.dump(self.spells, fp, indent=4, sort_keys=True)
 
         self.statusbar.showMessage('{0} spells saved'.format(len(self.spells)), 2000)
 
