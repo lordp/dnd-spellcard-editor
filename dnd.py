@@ -56,7 +56,7 @@ class DNDApp(QtGui.QMainWindow, dndui.Ui_MainWindow):
         with open(self.spell_filename, 'w') as fp:
             json.dump(self.spells, fp)
 
-        self.statusbar.showMessage('{0] spells saved'.format(len(self.spells)), 2000)
+        self.statusbar.showMessage('{0} spells saved'.format(len(self.spells)), 2000)
 
     def update_spell(self):
         spell_name = self.spell_name.text()
