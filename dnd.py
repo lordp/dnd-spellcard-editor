@@ -50,6 +50,9 @@ class DNDApp(QtGui.QMainWindow, dndui.Ui_MainWindow):
             self.statusbar.showMessage('Failed to load spell list', 2000)
 
     def save_spells(self):
+        if self.spell_filename is None:
+            self.spell_filename = 'spells.json'
+
         with open(self.spell_filename, 'w') as fp:
             json.dump(self.spells, fp)
 
