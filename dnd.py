@@ -10,7 +10,7 @@ class DNDApp(QtGui.QMainWindow, dndui.Ui_MainWindow):
         super(DNDApp, self).__init__(parent)
         self.setupUi(self)
 
-        self.spell_filename = ''
+        self.spell_filename = None
 
         self.spell_text.textChanged.connect(self.spell_text_content_changed)
         self.spell_list.currentIndexChanged.connect(self.display_spell)
